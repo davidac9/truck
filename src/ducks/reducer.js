@@ -1,6 +1,6 @@
 const initialState = {
     username: '',
-    tb_id: 0,
+    tb_user_id: 0,
     tb_pic: ''
 }
 
@@ -24,8 +24,8 @@ export default (state = initialState, action) => {
     const {type, payload} = action
     switch (type) {
         case SET_USER:
-            const {username, tb_pic, tb_id} = payload
-            return {...state, username, tb_pic, tb_id}
+            const {username, tb_pic, tb_user_id} = payload
+            return {...state, username, tb_pic, tb_user_id}
         case LOGOUT_USER: 
             return initialState
         default: return state          
